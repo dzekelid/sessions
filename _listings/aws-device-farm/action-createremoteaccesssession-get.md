@@ -10,7 +10,7 @@ produces:
 consumes:
 - application/json
 paths:
-  /?Action=CreateRemoteAccessSession&k=1:
+  /?Action=CreateRemoteAccessSession:
     get:
       summary: ' Create Remote Access Session '
       description: Specifies and starts a remote access session
