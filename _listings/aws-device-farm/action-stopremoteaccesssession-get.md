@@ -10,7 +10,7 @@ produces:
 consumes:
 - application/json
 paths:
-  /?Action=StopRemoteAccessSession&k=1:
+  /?Action=StopRemoteAccessSession:
     get:
       summary: ' Stop Remote Access Session '
       description: Ends a specified remote access session
