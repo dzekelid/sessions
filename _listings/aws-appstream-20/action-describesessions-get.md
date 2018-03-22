@@ -15,7 +15,7 @@ produces:
 consumes:
 - application/json
 paths:
-  /?Action=DescribeSessions&k=1:
+  /?Action=DescribeSessions:
     get:
       summary: Describe Sessions
       description: Describes the streaming sessions for a stack and a fleet
