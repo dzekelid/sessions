@@ -10,7 +10,7 @@ produces:
 consumes:
 - application/json
 paths:
-  /?Action=InstallToRemoteAccessSession&k=1:
+  /?Action=InstallToRemoteAccessSession:
     get:
       summary: ' Install To Remote Access Session '
       description: Installs an application to the device in a remote access session
