@@ -10,7 +10,7 @@ produces:
 consumes:
 - application/json
 paths:
-  /?Action=DeleteRemoteAccessSession&k=1:
+  /?Action=DeleteRemoteAccessSession:
     get:
       summary: ' Delete Remote Access Session '
       description: Deletes a completed remote access session and its results
