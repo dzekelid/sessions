@@ -10,9 +10,9 @@ x-alexaRank: ""
 tags:
 - Stack Network
 - Amazon Web Services
-created: "2018-03-13"
-modified: "2018-03-13"
-url: https://raw.githubusercontent.com/streamdata-gallery/sessions/master/_listings/aws-device-farm/apis.yaml
+created: "2018-03-22"
+modified: "2018-03-22"
+url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/aws-device-farm/apis.yaml
 specificationVersion: "0.14"
 apis:
 - name: AWS Device Farm API
@@ -25,7 +25,7 @@ apis:
   tags: Sessions
   properties:
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery/sessions/master/_listings/aws-device-farm/action-stopremoteaccesssession-get.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/aws-device-farm/action-createremoteaccesssession-get.md
 x-common:
 - type: x-blog
   url: https://aws.amazon.com/blogs/mobile/tag/aws-device-farm/
