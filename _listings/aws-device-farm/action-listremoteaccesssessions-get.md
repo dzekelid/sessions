@@ -10,7 +10,7 @@ produces:
 consumes:
 - application/json
 paths:
-  /?Action=ListRemoteAccessSessions&k=1:
+  /?Action=ListRemoteAccessSessions:
     get:
       summary: ' List Remote Access Sessions '
       description: Returns a list of all currently running remote access sessions
