@@ -25,7 +25,7 @@ apis:
   tags: Sessions
   properties:
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/aws-device-farm/action-createremoteaccesssession-get.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/aws-device-farm/action-deleteremoteaccesssession-get.md
 x-common:
 - type: x-blog
   url: https://aws.amazon.com/blogs/mobile/tag/aws-device-farm/
