@@ -1,12 +1,8 @@
 ---
 swagger: "2.0"
 info:
-  title: AWS AppStream 2.0 API
-  description: Amazon AppStream 2.0 is a fully managed, secure application streaming
-    service that allows you to stream desktop applications from AWS to any device
-    running a web browser, without rewriting them. Amazon AppStream 2.0 provides users
-    instant-on access to the applications they need, and a responsive, fluid user
-    experience on the device of their choice.
+  title: AWS AppStream 2.0 API Describe Sessions
+  description: Describes the streaming sessions for a stack and a fleet.
   version: 1.0.0
 schemes:
 - http
