@@ -1,8 +1,9 @@
 ---
 swagger: "2.0"
 info:
-  title: AWS Device Farm API
+  title: AWS Device Farm API List Remote Access Sessions
   version: 1.0.0
+  description: Returns a list of all currently running remote access sessions.
 schemes:
 - http
 produces:
