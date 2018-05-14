@@ -26,15 +26,15 @@ apis:
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/aws-device-farm/action-stopremoteaccesssession-get.md
-- name: AWS Device Farm API Create Remote Access Session
-  description: Specifies and starts a remote access session.
+- name: AWS Device Farm API Delete Remote Access Session
+  description: Deletes a completed remote access session and its results.
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/Mobile-Services_AWSDeviceFarm.png
   humanURL: https://aws.amazon.com/device-farm/
   baseURL: http:://{host}//
   tags: Sessions
   properties:
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/aws-device-farm/action-createremoteaccesssession-get.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/aws-device-farm/action-deleteremoteaccesssession-get.md
 x-common:
 - type: x-blog
   url: https://aws.amazon.com/blogs/mobile/tag/aws-device-farm/
