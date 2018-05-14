@@ -1,8 +1,9 @@
 ---
 swagger: "2.0"
 info:
-  title: AWS Device Farm API
+  title: AWS Device Farm API Stop Remote Access Session
   version: 1.0.0
+  description: Ends a specified remote access session.
 schemes:
 - http
 produces:
