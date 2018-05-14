@@ -1,8 +1,9 @@
 ---
 swagger: "2.0"
 info:
-  title: AWS Device Farm API
+  title: AWS Device Farm API Delete Remote Access Session
   version: 1.0.0
+  description: Deletes a completed remote access session and its results.
 schemes:
 - http
 produces:
