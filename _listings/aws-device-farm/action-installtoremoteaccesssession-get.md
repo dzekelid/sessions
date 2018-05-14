@@ -1,8 +1,9 @@
 ---
 swagger: "2.0"
 info:
-  title: AWS Device Farm API
+  title: AWS Device Farm API Install To Remote Access Session
   version: 1.0.0
+  description: Installs an application to the device in a remote access session.
 schemes:
 - http
 produces:
