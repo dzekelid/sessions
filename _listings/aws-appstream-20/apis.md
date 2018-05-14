@@ -26,7 +26,28 @@ apis:
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/aws-appstream-20/action-describesessions-get.md
+- name: AWS AppStream 2.0 API Describe Sessions
+  description: Describes the streaming sessions for a stack and a fleet.
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/appstream2_try_it_now_2_big.png
+  humanURL: https://aws.amazon.com/appstream2/
+  baseURL: http:://{host}//
+  tags: Sessions
+  properties:
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/aws-appstream-20/action-describesessions-get.md
 x-common:
+- type: x-documentation
+  url: http://docs.aws.amazon.com/appstream2/latest/APIReference/
+- type: x-faq
+  url: https://aws.amazon.com/appstream2/faqs/
+- type: x-forum
+  url: https://aws.amazon.com/appstream2/resources/#forum
+- type: x-getting-started
+  url: https://aws.amazon.com/appstream2/resources/#getting_starte
+- type: x-pricing
+  url: https://aws.amazon.com/appstream2/pricing/
+- type: x-website
+  url: https://aws.amazon.com/appstream2/
 - type: x-documentation
   url: http://docs.aws.amazon.com/appstream2/latest/APIReference/
 - type: x-faq
