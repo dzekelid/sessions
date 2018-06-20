@@ -1,23 +1,57 @@
 ---
 name: Mattermost
+x-slug: mattermost
 description: Open source, private cloud Slack-alternative, Workplace messaging for
   web, PCs and phones. MIT-licensed. Hundreds of contributors. 14 languages. Secure,
   configurable, and scalable from teams to the enterprise.
 image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/mattermost-logo.png
 x-kinRank: "8"
 x-alexaRank: "95684"
-tags:
-- Technology
-- SaaS
-- New
-- Networking
-- Enterprise
-- Cloud
-created: "2018-05-13"
-modified: "2018-05-13"
+tags: Sessions
+created: "2018-06-20"
+modified: "2018-06-20"
 url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/mattermost/apis.md
 specificationVersion: "0.14"
-apis: []
+apis:
+- name: Mattermost API Get user's sessions
+  x-api-slug: mattermost-api
+  description: |-
+    Get a list of sessions by providing the user GUID. Sensitive information will be sanitized out.
+    ##### Permissions
+    Must be logged in as the user being updated or have the `edit_other_users` permission.
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/mattermost-logo.png
+  humanURL: https://mattermost.com
+  baseURL: https://your-mattermost-url.com//api/v4//users/{user_id}/sessions
+  tags: Users,Sessions
+  properties:
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/mattermost/usersuser-idsessions-get-openapi.md
+- name: Mattermost API Revoke all active sessions for a user
+  x-api-slug: mattermost-api
+  description: |-
+    Revokes all user sessions from the provided user id and session id strings.
+    ##### Permissions
+    Must be logged in as the user being updated or have the `edit_other_users` permission.
+    __Minimum server version__: 4.4
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/mattermost-logo.png
+  humanURL: https://mattermost.com
+  baseURL: https://your-mattermost-url.com//api/v4//users/{user_id}/sessions/revoke/all
+  tags: Revoke,,Active,Sessionsa,User
+  properties:
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/mattermost/usersuser-idsessionsrevokeall-post-openapi.md
+- name: Mattermost API
+  x-api-slug: mattermost-api
+  description: Open source, private cloud Slack-alternative, Workplace messaging for
+    web, PCs and phones. MIT-licensed. Hundreds of contributors. 14 languages. Secure,
+    configurable, and scalable from teams to the enterprise.
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/mattermost-logo.png
+  humanURL: https://mattermost.com
+  baseURL: https://your-mattermost-url.com//api/v4
+  tags: Sessions
+  properties:
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/mattermost/openapi.md
 x-common:
 - type: x-blog
   url: https://about.mattermost.com/blog/
