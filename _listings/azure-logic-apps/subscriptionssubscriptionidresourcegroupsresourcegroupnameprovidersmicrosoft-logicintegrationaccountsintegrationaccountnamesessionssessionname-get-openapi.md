@@ -15,32 +15,6 @@ produces:
 consumes:
 - application/json
 paths:
-  ? /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Logic/integrationAccounts/{integrationAccountName}/sessions
-  : get:
-      summary: Sessions List By Integration Accounts
-      description: Gets a list of integration account sessions.
-      operationId: Sessions_ListByIntegrationAccounts
-      x-api-path-slug: subscriptionssubscriptionidresourcegroupsresourcegroupnameprovidersmicrosoft-logicintegrationaccountsintegrationaccountnamesessions-get
-      parameters:
-      - in: query
-        name: $filter
-        description: The filter to apply on the operation
-      - in: query
-        name: $top
-        description: The number of items to be included in the result
-      - in: path
-        name: integrationAccountName
-        description: The integration account name
-      - in: query
-        name: No Name
-      - in: path
-        name: resourceGroupName
-        description: The resource group name
-      responses:
-        200:
-          description: OK
-      tags:
-      - Sessions Integration Accounts
   ? /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Logic/integrationAccounts/{integrationAccountName}/sessions/{sessionName}
   : get:
       summary: Sessions Get

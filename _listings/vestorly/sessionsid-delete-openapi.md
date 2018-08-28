@@ -1,0 +1,73 @@
+---
+swagger: "2.0"
+x-collection-name: Vestorly
+x-complete: 0
+info:
+  title: Vestorly Delete Sessions
+  description: Logout of the vestorly platform
+  termsOfService: http://www.vestorly.com/terms/
+  contact:
+    name: Vestorly Team
+  version: 1.0.0
+host: staging.vestorly.com
+basePath: /api/v2
+schemes:
+- http
+produces:
+- application/json
+consumes:
+- application/json
+paths:
+  /sessions:
+    post:
+      summary: Post Sessions
+      description: Login To Vestorly Platform
+      operationId: login
+      x-api-path-slug: sessions-post
+      parameters:
+      - in: query
+        name: password
+        description: Password in Vestorly Platform
+      - in: query
+        name: username
+        description: Username in the vestorly platform
+      responses:
+        200:
+          description: OK
+      tags:
+      - Sessions
+  /sessions/{id}:
+    delete:
+      summary: Delete Sessions
+      description: Logout of the vestorly platform
+      operationId: logout
+      x-api-path-slug: sessionsid-delete
+      parameters:
+      - in: path
+        name: id
+        description: ID of pet to session
+      - in: query
+        name: vestorly-auth
+        description: Authenication token
+      - in: query
+        name: vestorly_auth
+        description: Authenication token
+      responses:
+        200:
+          description: OK
+      tags:
+      - Sessions
+x-streamrank:
+  polling_total_time_average: 0
+  polling_size_download_average: 0
+  streaming_total_time_average: 0
+  streaming_size_download_average: 0
+  change_yes: 0
+  change_no: 0
+  time_percentage: 0
+  size_percentage: 0
+  change_percentage: 0
+  last_run: ""
+  days_run: 0
+  minute_run: 0
+---

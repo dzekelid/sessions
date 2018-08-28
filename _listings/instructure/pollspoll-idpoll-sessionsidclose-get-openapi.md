@@ -16,6 +16,36 @@ produces:
 consumes:
 - application/json
 paths:
+  /courses/{course_id}/external_tools/sessionless_launch:
+    get:
+      summary: Get a sessionless launch url for an external tool.
+      description: Get a sessionless launch url for an external tool..
+      operationId: get-a-sessionless-launch-url-for-an-external-tool
+      x-api-path-slug: coursescourse-idexternal-toolssessionless-launch-get
+      parameters:
+      - in: query
+        name: assignment_id
+        description: The assignment id for an assignment launch
+      - in: query
+        name: id
+        description: The external id of the tool to launch
+      - in: query
+        name: launch_type
+        description: The type of launch to perform on the external tool
+      - in: query
+        name: url
+        description: The LTI launch url for the external tool
+      responses:
+        200:
+          description: OK
+      tags:
+      - Courses
+      - Course
+      - Id
+      - External
+      - Tools
+      - Sessionless
+      - Launch
   /polls/{poll_id}/poll_sessions:
     get:
       summary: List poll sessions for a poll

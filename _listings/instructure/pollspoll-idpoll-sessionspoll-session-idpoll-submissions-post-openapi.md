@@ -16,6 +16,36 @@ produces:
 consumes:
 - application/json
 paths:
+  /courses/{course_id}/external_tools/sessionless_launch:
+    get:
+      summary: Get a sessionless launch url for an external tool.
+      description: Get a sessionless launch url for an external tool..
+      operationId: get-a-sessionless-launch-url-for-an-external-tool
+      x-api-path-slug: coursescourse-idexternal-toolssessionless-launch-get
+      parameters:
+      - in: query
+        name: assignment_id
+        description: The assignment id for an assignment launch
+      - in: query
+        name: id
+        description: The external id of the tool to launch
+      - in: query
+        name: launch_type
+        description: The type of launch to perform on the external tool
+      - in: query
+        name: url
+        description: The LTI launch url for the external tool
+      responses:
+        200:
+          description: OK
+      tags:
+      - Courses
+      - Course
+      - Id
+      - External
+      - Tools
+      - Sessionless
+      - Launch
   /polls/{poll_id}/poll_sessions:
     get:
       summary: List poll sessions for a poll
@@ -169,6 +199,53 @@ paths:
       - Id
       - Poll
       - Submissions
+  /polls/{poll_id}/poll_sessions/poll_session_id/poll_submissions/{id}:
+    get:
+      summary: Get a single poll submission
+      description: Get a single poll submission.
+      operationId: get-a-single-poll-submission
+      x-api-path-slug: pollspoll-idpoll-sessionspoll-session-idpoll-submissionsid-get
+      responses:
+        200:
+          description: OK
+      tags:
+      - Polls
+      - Poll
+      - Id
+      - Poll
+      - Sessions
+      - Poll
+      - Session
+      - Id
+      - Poll
+      - Submissions
+      - Id
+  /poll_sessions/closed:
+    get:
+      summary: List closed poll sessions
+      description: List closed poll sessions.
+      operationId: list-closed-poll-sessions
+      x-api-path-slug: poll-sessionsclosed-get
+      responses:
+        200:
+          description: OK
+      tags:
+      - Poll
+      - Sessions
+      - Closed
+  /poll_sessions/opened:
+    get:
+      summary: List opened poll sessions
+      description: List opened poll sessions.
+      operationId: list-opened-poll-sessions
+      x-api-path-slug: poll-sessionsopened-get
+      responses:
+        200:
+          description: OK
+      tags:
+      - Poll
+      - Sessions
+      - Opened
 x-streamrank:
   polling_total_time_average: 0
   polling_size_download_average: 0

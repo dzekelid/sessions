@@ -1,18 +1,17 @@
----
 swagger: "2.0"
 x-collection-name: GoToMeeting
 x-complete: 1
 info:
-  title: Go To Webinar
-  description: the-gotowebinar-api-provides-seamless-integration-of-webinar-registrant-and-attendee-data-into-your-existing-infrastructure-or-thirdparty-applications--the-ability-to-register-participants-as-well-as-pull-lists-of-registrants-and-attendees-for-a-webinar-allows-organizers-to-manage-the-flow-of-information-between-their-primary-applications-without-manual-intervention-
+  title: SCIM
+  description: the-scim-api-lets-you-manage-users-in-your-organization--you-can-then-automate-the-provisioning-of-product-licenses-for-these-users-and-they-can-use-your-companys-single-signon-solution-through-an-identity-provider-
   termsOfService: https://developer.citrixonline.com/terms-use
   contact:
     name: Developer Support
     url: https://developer.citrixonline.com
     email: developer-support@citrixonline.com
-  version: 1.0.0
+  version: N/A
 host: api.citrixonline.com
-basePath: /G2W/rest
+basePath: /identity/v1
 schemes:
 - http
 produces:
@@ -20,6 +19,130 @@ produces:
 consumes:
 - application/json
 paths:
+  /sessions:
+    get:
+      summary: Get details for multiple GoToAssist Seeit sessions
+      description: <p>This endpoint allows you to get all relevant details for mulitple
+        GoToAssist Seeit sessions. Session details are available for 90 days.</p></p>The
+        fields and their values in the response depend on session status and the time
+        elapsed since session end; e.g. session data like snapshots or the session
+        recording are only available for 72 hours.</p><p>The results will be paged,
+        with paging customizable to match your requirements.</p>
+      operationId: sessions.get
+      x-api-path-slug: sessions-get
+      parameters:
+      - in: query
+        name: endTime
+        description: Optional end of date range as timestamp (will be compared against
+          session creation time)
+      - in: query
+        name: No Name
+      - in: query
+        name: page
+        description: Optional page number
+      - in: query
+        name: size
+        description: Optional page size
+      - in: query
+        name: sort
+        description: Optional sort criteria, i
+      - in: query
+        name: startTime
+        description: Optional start of date range as timestamp (will be compared against
+          session creation time)
+      responses:
+        200:
+          description: OK
+      tags:
+      - Sessions
+    post:
+      summary: Create a GoToAssist Seeit session
+      description: This endpoint allows you to create a GoToAssist Seeit session.
+        The session logically exists but is not started until you open the returned
+        startUrl in a suitable browser.
+      operationId: sessions.post
+      x-api-path-slug: sessions-post
+      parameters:
+      - in: query
+        name: No Name
+      responses:
+        200:
+          description: OK
+      tags:
+      - Sessions
+  /sessions/{uuid}:
+    get:
+      summary: Get details for a single GoToAssist Seeit session
+      description: <p>This endpoint allows you to get all relevant details for a single
+        GoToAssist Seeit session. Session details are available for 90 days.</p><p>The
+        fields and their values in the response depend on session status and the time
+        elapsed since session end; e.g. session data like snapshots or the session
+        recording are only available for 72 hours.</p>
+      operationId: sessions.uuid.get
+      x-api-path-slug: sessionsuuid-get
+      parameters:
+      - in: query
+        name: No Name
+      - in: path
+        name: uuid
+        description: the uuid returned when creating the session
+      responses:
+        200:
+          description: OK
+      tags:
+      - Sessions
+      - Uuid
+  /reports/organizers/{organizerKey}/sessions:
+    post:
+      summary: Get Sessions by Date Range
+      description: This call returns all session details over a given date range for
+        a given organizer. A session is a completed training event.
+      operationId: getSessionDetailsForDateRange
+      x-api-path-slug: reportsorganizersorganizerkeysessions-post
+      parameters:
+      - in: body
+        name: body
+        description: The start and end times for the time range over which to retrieve
+          training sessions
+        schema:
+          $ref: '#/definitions/holder'
+      - in: query
+        name: No Name
+      responses:
+        200:
+          description: OK
+      tags:
+      - Reports
+      - Organizers
+      - OrganizerKey
+      - Sessions
+  /reports/organizers/{organizerKey}/sessions/{sessionKey}/attendees:
+    get:
+      summary: Get Attendance Details
+      description: This call retrieves a list of registrants from a specific completed
+        training session. The response includes the registrants' email addresses,
+        and if they attended, it includes the duration of each period of their attendance
+        in minutes, and the times at which they joined and left. If a registrant does
+        not attend, they appear at the bottom of the listing with timeInSession =
+        0.
+      operationId: getAttendanceDetails
+      x-api-path-slug: reportsorganizersorganizerkeysessionssessionkeyattendees-get
+      parameters:
+      - in: query
+        name: No Name
+      - in: path
+        name: sessionKey
+        description: The key of the training session
+      responses:
+        200:
+          description: OK
+      tags:
+      - Reports
+      - Organizers
+      - OrganizerKey
+      - Sessions
+      - SessionKey
+      - Attendees
   /organizers/{organizerKey}/sessions:
     get:
       summary: Get organizer sessions
@@ -289,4 +412,3 @@ paths:
       - Sessions
       - SessionKey
       - Surveys
----

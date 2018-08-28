@@ -7,13 +7,13 @@ image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/731-gotome
 x-kinRank: "7"
 x-alexaRank: "7422"
 tags: Sessions
-created: "2018-06-25"
-modified: "2018-06-25"
+created: "2018-08-28"
+modified: "2018-08-28"
 url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/gotomeeting/apis.md
 specificationVersion: "0.14"
 apis:
-- name: Go To Assist Seeit Get details for multiple GoToAssist Seeit sessions
-  x-api-slug: go-to-assist-seeit
+- name: Go To Assist Seeit - Get details for multiple GoToAssist Seeit sessions
+  x-api-slug: sessions-get
   description: <p>This endpoint allows you to get all relevant details for mulitple
     GoToAssist Seeit sessions. Session details are available for 90 days.</p></p>The
     fields and their values in the response depend on session status and the time
@@ -22,29 +22,33 @@ apis:
     customizable to match your requirements.</p>
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/731-gotomeeting.jpg
   humanURL: https://citrixonline.com
-  baseURL: https://api.citrixonline.com//seeit/v1//sessions
-  tags: Sessions
+  baseURL: https://api.citrixonline.com//seeit/v1
+  tags: Office, Meetings, Collaboration, Video Conferencing, Video Conferencing, SaaS,
+    Technology, Enterprise, API Provider, Meetings, Profiles, Conferences, Relative
+    Data, Service API, Networks
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/gotomeeting/sessions-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/gotomeeting/sessions-get-openapi.md
-- name: Go To Assist Seeit Create a GoToAssist Seeit session
-  x-api-slug: go-to-assist-seeit
+- name: Go To Assist Seeit - Create a GoToAssist Seeit session
+  x-api-slug: sessions-post
   description: This endpoint allows you to create a GoToAssist Seeit session. The
     session logically exists but is not started until you open the returned startUrl
     in a suitable browser.
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/731-gotomeeting.jpg
   humanURL: https://citrixonline.com
-  baseURL: https://api.citrixonline.com//seeit/v1//sessions
-  tags: Sessions
+  baseURL: https://api.citrixonline.com//seeit/v1
+  tags: Office, Meetings, Collaboration, Video Conferencing, Video Conferencing, SaaS,
+    Technology, Enterprise, API Provider, Meetings, Profiles, Conferences, Relative
+    Data, Service API, Networks
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/gotomeeting/sessions-post-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/gotomeeting/sessions-post-openapi.md
-- name: Go To Assist Seeit Get details for a single GoToAssist Seeit session
-  x-api-slug: go-to-assist-seeit
+- name: Go To Assist Seeit - Get details for a single GoToAssist Seeit session
+  x-api-slug: sessionsuuid-get
   description: <p>This endpoint allows you to get all relevant details for a single
     GoToAssist Seeit session. Session details are available for 90 days.</p><p>The
     fields and their values in the response depend on session status and the time
@@ -52,37 +56,30 @@ apis:
     are only available for 72 hours.</p>
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/731-gotomeeting.jpg
   humanURL: https://citrixonline.com
-  baseURL: https://api.citrixonline.com//seeit/v1//sessions/{uuid}
-  tags: Sessions,Uuid
+  baseURL: https://api.citrixonline.com//seeit/v1
+  tags: Office, Meetings, Collaboration, Video Conferencing, Video Conferencing, SaaS,
+    Technology, Enterprise, API Provider, Meetings, Profiles, Conferences, Relative
+    Data, Service API, Networks
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/gotomeeting/sessionsuuid-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/gotomeeting/sessionsuuid-get-openapi.md
-- name: Go To Assist Seeit
-  x-api-slug: go-to-assist-seeit
-  description: Citrix enables business mobility through the secure delivery of apps
-    and data to any device on any network.
-  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/731-gotomeeting.jpg
-  humanURL: https://citrixonline.com
-  baseURL: https://api.citrixonline.com//seeit/v1
-  tags: Sessions
-  properties:
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/gotomeeting/openapi.md
-- name: Go To Training Get Sessions by Date Range
-  x-api-slug: go-to-training
+- name: Go To Training - Get Sessions by Date Range
+  x-api-slug: reportsorganizersorganizerkeysessions-post
   description: This call returns all session details over a given date range for a
     given organizer. A session is a completed training event.
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/731-gotomeeting.jpg
   humanURL: https://citrixonline.com
-  baseURL: https://api.citrixonline.com//G2T/rest//reports/organizers/{organizerKey}/sessions
-  tags: Reports,Organizers,OrganizerKey,Sessions
+  baseURL: https://api.citrixonline.com//G2T/rest
+  tags: Office, Meetings, Collaboration, Video Conferencing, Video Conferencing, SaaS,
+    Technology, Enterprise, API Provider, Meetings, Profiles, Conferences, Relative
+    Data, Service API, Networks
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/gotomeeting/reportsorganizersorganizerkeysessions-post-openapi.md
-- name: Go To Training Get Attendance Details
-  x-api-slug: go-to-training
+- name: Go To Training - Get Attendance Details
+  x-api-slug: reportsorganizersorganizerkeysessionssessionkeyattendees-get
   description: This call retrieves a list of registrants from a specific completed
     training session. The response includes the registrants' email addresses, and
     if they attended, it includes the duration of each period of their attendance
@@ -90,48 +87,91 @@ apis:
     not attend, they appear at the bottom of the listing with timeInSession = 0.
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/731-gotomeeting.jpg
   humanURL: https://citrixonline.com
-  baseURL: https://api.citrixonline.com//G2T/rest//reports/organizers/{organizerKey}/sessions/{sessionKey}/attendees
-  tags: Reports,Organizers,OrganizerKey,Sessions,SessionKey,Attendees
+  baseURL: https://api.citrixonline.com//G2T/rest
+  tags: Office, Meetings, Collaboration, Video Conferencing, Video Conferencing, SaaS,
+    Technology, Enterprise, API Provider, Meetings, Profiles, Conferences, Relative
+    Data, Service API, Networks
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/gotomeeting/reportsorganizersorganizerkeysessionssessionkeyattendees-get-openapi.md
-- name: Go To Training
-  x-api-slug: go-to-training
-  description: Citrix enables business mobility through the secure delivery of apps
-    and data to any device on any network.
+- name: Go To Training - Get Attendance Details
+  x-api-slug: reportsorganizersorganizerkeysessionssessionkeyattendees-get
+  description: This call retrieves a list of registrants from a specific completed
+    training session. The response includes the registrants' email addresses, and
+    if they attended, it includes the duration of each period of their attendance
+    in minutes, and the times at which they joined and left. If a registrant does
+    not attend, they appear at the bottom of the listing with timeInSession = 0.
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/731-gotomeeting.jpg
   humanURL: https://citrixonline.com
   baseURL: https://api.citrixonline.com//G2T/rest
-  tags: Sessions
+  tags: Office, Meetings, Collaboration, Video Conferencing, Video Conferencing, SaaS,
+    Technology, Enterprise, API Provider, Meetings, Profiles, Conferences, Relative
+    Data, Service API, Networks
   properties:
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/gotomeeting/openapi.md
-- name: Go To Webinar Get organizer sessions
-  x-api-slug: go-to-webinar
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/gotomeeting/reportsorganizersorganizerkeysessionssessionkeyattendees-get-openapi.md
+- name: Go To Training - Get Attendance Details
+  x-api-slug: reportsorganizersorganizerkeysessionssessionkeyattendees-get
+  description: This call retrieves a list of registrants from a specific completed
+    training session. The response includes the registrants' email addresses, and
+    if they attended, it includes the duration of each period of their attendance
+    in minutes, and the times at which they joined and left. If a registrant does
+    not attend, they appear at the bottom of the listing with timeInSession = 0.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/731-gotomeeting.jpg
+  humanURL: https://citrixonline.com
+  baseURL: https://api.citrixonline.com//G2T/rest
+  tags: Office, Meetings, Collaboration, Video Conferencing, Video Conferencing, SaaS,
+    Technology, Enterprise, API Provider, Meetings, Profiles, Conferences, Relative
+    Data, Service API, Networks
+  properties:
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/gotomeeting/reportsorganizersorganizerkeysessionssessionkeyattendees-get-openapi.md
+- name: Go To Training - Get Attendance Details
+  x-api-slug: reportsorganizersorganizerkeysessionssessionkeyattendees-get
+  description: This call retrieves a list of registrants from a specific completed
+    training session. The response includes the registrants' email addresses, and
+    if they attended, it includes the duration of each period of their attendance
+    in minutes, and the times at which they joined and left. If a registrant does
+    not attend, they appear at the bottom of the listing with timeInSession = 0.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/731-gotomeeting.jpg
+  humanURL: https://citrixonline.com
+  baseURL: https://api.citrixonline.com//G2T/rest
+  tags: Office, Meetings, Collaboration, Video Conferencing, Video Conferencing, SaaS,
+    Technology, Enterprise, API Provider, Meetings, Profiles, Conferences, Relative
+    Data, Service API, Networks
+  properties:
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/gotomeeting/reportsorganizersorganizerkeysessionssessionkeyattendees-get-openapi.md
+- name: Go To Webinar - Get organizer sessions
+  x-api-slug: organizersorganizerkeysessions-get
   description: Retrieve all completed sessions of all the webinars of a given organizer.
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/731-gotomeeting.jpg
   humanURL: https://citrixonline.com
-  baseURL: https://api.citrixonline.com//G2W/rest//organizers/{organizerKey}/sessions
-  tags: Organizers,OrganizerKey,Sessions
+  baseURL: https://api.citrixonline.com//G2W/rest
+  tags: Office, Meetings, Collaboration, Video Conferencing, Video Conferencing, SaaS,
+    Technology, Enterprise, API Provider, Meetings, Profiles, Conferences, Relative
+    Data, Service API, Networks
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/gotomeeting/organizersorganizerkeysessions-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/gotomeeting/organizersorganizerkeysessions-get-openapi.md
-- name: Go To Webinar Get webinar sessions
-  x-api-slug: go-to-webinar
+- name: Go To Webinar - Get webinar sessions
+  x-api-slug: organizersorganizerkeywebinarswebinarkeysessions-get
   description: Retrieves details for all past sessions of a specific webinar.
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/731-gotomeeting.jpg
   humanURL: https://citrixonline.com
-  baseURL: https://api.citrixonline.com//G2W/rest//organizers/{organizerKey}/webinars/{webinarKey}/sessions
-  tags: Organizers,OrganizerKey,Webinars,WebinarKey,Sessions
+  baseURL: https://api.citrixonline.com//G2W/rest
+  tags: Office, Meetings, Collaboration, Video Conferencing, Video Conferencing, SaaS,
+    Technology, Enterprise, API Provider, Meetings, Profiles, Conferences, Relative
+    Data, Service API, Networks
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/gotomeeting/organizersorganizerkeywebinarswebinarkeysessions-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/gotomeeting/organizersorganizerkeywebinarswebinarkeysessions-get-openapi.md
-- name: Go To Webinar Get webinar session
-  x-api-slug: go-to-webinar
+- name: Go To Webinar - Get webinar session
+  x-api-slug: organizersorganizerkeywebinarswebinarkeysessionssessionkey-get
   description: Retrieves attendance details for a specific webinar session that has
     ended. If attendees attended the session ('registrantsAttended'), specific attendance
     details, such as attendenceTime for a registrant, will also be retrieved. For
@@ -139,151 +179,650 @@ apis:
     use the curl command to execute it.
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/731-gotomeeting.jpg
   humanURL: https://citrixonline.com
-  baseURL: https://api.citrixonline.com//G2W/rest//organizers/{organizerKey}/webinars/{webinarKey}/sessions/{sessionKey}
-  tags: Organizers,OrganizerKey,Webinars,WebinarKey,Sessions,SessionKey
+  baseURL: https://api.citrixonline.com//G2W/rest
+  tags: Office, Meetings, Collaboration, Video Conferencing, Video Conferencing, SaaS,
+    Technology, Enterprise, API Provider, Meetings, Profiles, Conferences, Relative
+    Data, Service API, Networks
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/gotomeeting/organizersorganizerkeywebinarswebinarkeysessionssessionkey-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/gotomeeting/organizersorganizerkeywebinarswebinarkeysessionssessionkey-get-openapi.md
-- name: Go To Webinar Get session attendees
-  x-api-slug: go-to-webinar
+- name: Go To Webinar - Get session attendees
+  x-api-slug: organizersorganizerkeywebinarswebinarkeysessionssessionkeyattendees-get
   description: Retrieve details for all attendees of a specific webinar session. For
     technical reasons, this call cannot be executed from this documentation. Please
     use the curl command to execute it.
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/731-gotomeeting.jpg
   humanURL: https://citrixonline.com
-  baseURL: https://api.citrixonline.com//G2W/rest//organizers/{organizerKey}/webinars/{webinarKey}/sessions/{sessionKey}/attendees
-  tags: Organizers,OrganizerKey,Webinars,WebinarKey,Sessions,SessionKey,Attendees
+  baseURL: https://api.citrixonline.com//G2W/rest
+  tags: Office, Meetings, Collaboration, Video Conferencing, Video Conferencing, SaaS,
+    Technology, Enterprise, API Provider, Meetings, Profiles, Conferences, Relative
+    Data, Service API, Networks
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/gotomeeting/organizersorganizerkeywebinarswebinarkeysessionssessionkeyattendees-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/gotomeeting/organizersorganizerkeywebinarswebinarkeysessionssessionkeyattendees-get-openapi.md
-- name: Go To Webinar Get attendee
-  x-api-slug: go-to-webinar
+- name: Go To Webinar - Get attendee
+  x-api-slug: organizersorganizerkeywebinarswebinarkeysessionssessionkeyattendeesregistrantkey-get
   description: Retrieve registration details for a particular attendee of a specific
     webinar session. For technical reasons, this call cannot be executed from this
     documentation. Please use the curl command to execute it.
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/731-gotomeeting.jpg
   humanURL: https://citrixonline.com
-  baseURL: https://api.citrixonline.com//G2W/rest//organizers/{organizerKey}/webinars/{webinarKey}/sessions/{sessionKey}/attendees/{registrantKey}
-  tags: Organizers,OrganizerKey,Webinars,WebinarKey,Sessions,SessionKey,Attendees,RegistrantKey
+  baseURL: https://api.citrixonline.com//G2W/rest
+  tags: Office, Meetings, Collaboration, Video Conferencing, Video Conferencing, SaaS,
+    Technology, Enterprise, API Provider, Meetings, Profiles, Conferences, Relative
+    Data, Service API, Networks
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/gotomeeting/organizersorganizerkeywebinarswebinarkeysessionssessionkeyattendeesregistrantkey-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/gotomeeting/organizersorganizerkeywebinarswebinarkeysessionssessionkeyattendeesregistrantkey-get-openapi.md
-- name: Go To Webinar Get attendee poll answers
-  x-api-slug: go-to-webinar
+- name: Go To Webinar - Get attendee poll answers
+  x-api-slug: organizersorganizerkeywebinarswebinarkeysessionssessionkeyattendeesregistrantkeypolls-get
   description: Get poll answers from a particular attendee of a specific webinar session.
     For technical reasons, this call cannot be executed from this documentation. Please
     use the curl command to execute it.
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/731-gotomeeting.jpg
   humanURL: https://citrixonline.com
-  baseURL: https://api.citrixonline.com//G2W/rest//organizers/{organizerKey}/webinars/{webinarKey}/sessions/{sessionKey}/attendees/{registrantKey}/polls
-  tags: Organizers,OrganizerKey,Webinars,WebinarKey,Sessions,SessionKey,Attendees,RegistrantKey,Polls
+  baseURL: https://api.citrixonline.com//G2W/rest
+  tags: Office, Meetings, Collaboration, Video Conferencing, Video Conferencing, SaaS,
+    Technology, Enterprise, API Provider, Meetings, Profiles, Conferences, Relative
+    Data, Service API, Networks
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/gotomeeting/organizersorganizerkeywebinarswebinarkeysessionssessionkeyattendeesregistrantkeypolls-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/gotomeeting/organizersorganizerkeywebinarswebinarkeysessionssessionkeyattendeesregistrantkeypolls-get-openapi.md
-- name: Go To Webinar Get attendee questions
-  x-api-slug: go-to-webinar
+- name: Go To Webinar - Get attendee questions
+  x-api-slug: organizersorganizerkeywebinarswebinarkeysessionssessionkeyattendeesregistrantkeyquestions-get
   description: Get questions asked by an attendee during a webinar session. For technical
     reasons, this call cannot be executed from this documentation. Please use the
     curl command to execute it.
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/731-gotomeeting.jpg
   humanURL: https://citrixonline.com
-  baseURL: https://api.citrixonline.com//G2W/rest//organizers/{organizerKey}/webinars/{webinarKey}/sessions/{sessionKey}/attendees/{registrantKey}/questions
-  tags: Organizers,OrganizerKey,Webinars,WebinarKey,Sessions,SessionKey,Attendees,RegistrantKey,Questions
+  baseURL: https://api.citrixonline.com//G2W/rest
+  tags: Office, Meetings, Collaboration, Video Conferencing, Video Conferencing, SaaS,
+    Technology, Enterprise, API Provider, Meetings, Profiles, Conferences, Relative
+    Data, Service API, Networks
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/gotomeeting/organizersorganizerkeywebinarswebinarkeysessionssessionkeyattendeesregistrantkeyquestions-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/gotomeeting/organizersorganizerkeywebinarswebinarkeysessionssessionkeyattendeesregistrantkeyquestions-get-openapi.md
-- name: Go To Webinar Get attendee survey answers
-  x-api-slug: go-to-webinar
+- name: Go To Webinar - Get attendee survey answers
+  x-api-slug: organizersorganizerkeywebinarswebinarkeysessionssessionkeyattendeesregistrantkeysurveys-get
   description: Retrieve survey answers from a particular attendee during a webinar
     session. For technical reasons, this call cannot be executed from this documentation.
     Please use the curl command to execute it.
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/731-gotomeeting.jpg
   humanURL: https://citrixonline.com
-  baseURL: https://api.citrixonline.com//G2W/rest//organizers/{organizerKey}/webinars/{webinarKey}/sessions/{sessionKey}/attendees/{registrantKey}/surveys
-  tags: Organizers,OrganizerKey,Webinars,WebinarKey,Sessions,SessionKey,Attendees,RegistrantKey,Surveys
+  baseURL: https://api.citrixonline.com//G2W/rest
+  tags: Office, Meetings, Collaboration, Video Conferencing, Video Conferencing, SaaS,
+    Technology, Enterprise, API Provider, Meetings, Profiles, Conferences, Relative
+    Data, Service API, Networks
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/gotomeeting/organizersorganizerkeywebinarswebinarkeysessionssessionkeyattendeesregistrantkeysurveys-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/gotomeeting/organizersorganizerkeywebinarswebinarkeysessionssessionkeyattendeesregistrantkeysurveys-get-openapi.md
-- name: Go To Webinar Get session performance
-  x-api-slug: go-to-webinar
+- name: Go To Webinar - Get session performance
+  x-api-slug: organizersorganizerkeywebinarswebinarkeysessionssessionkeyperformance-get
   description: Get performance details for a session. For technical reasons, this
     call cannot be executed from this documentation. Please use the curl command to
     execute it.
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/731-gotomeeting.jpg
   humanURL: https://citrixonline.com
-  baseURL: https://api.citrixonline.com//G2W/rest//organizers/{organizerKey}/webinars/{webinarKey}/sessions/{sessionKey}/performance
-  tags: Organizers,OrganizerKey,Webinars,WebinarKey,Sessions,SessionKey,Performance
+  baseURL: https://api.citrixonline.com//G2W/rest
+  tags: Office, Meetings, Collaboration, Video Conferencing, Video Conferencing, SaaS,
+    Technology, Enterprise, API Provider, Meetings, Profiles, Conferences, Relative
+    Data, Service API, Networks
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/gotomeeting/organizersorganizerkeywebinarswebinarkeysessionssessionkeyperformance-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/gotomeeting/organizersorganizerkeywebinarswebinarkeysessionssessionkeyperformance-get-openapi.md
-- name: Go To Webinar Get session polls
-  x-api-slug: go-to-webinar
+- name: Go To Webinar - Get session polls
+  x-api-slug: organizersorganizerkeywebinarswebinarkeysessionssessionkeypolls-get
   description: Retrieve all collated attendee questions and answers for polls from
     a specific webinar session. For technical reasons, this call cannot be executed
     from this documentation. Please use the curl command to execute it.
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/731-gotomeeting.jpg
   humanURL: https://citrixonline.com
-  baseURL: https://api.citrixonline.com//G2W/rest//organizers/{organizerKey}/webinars/{webinarKey}/sessions/{sessionKey}/polls
-  tags: Organizers,OrganizerKey,Webinars,WebinarKey,Sessions,SessionKey,Polls
+  baseURL: https://api.citrixonline.com//G2W/rest
+  tags: Office, Meetings, Collaboration, Video Conferencing, Video Conferencing, SaaS,
+    Technology, Enterprise, API Provider, Meetings, Profiles, Conferences, Relative
+    Data, Service API, Networks
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/gotomeeting/organizersorganizerkeywebinarswebinarkeysessionssessionkeypolls-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/gotomeeting/organizersorganizerkeywebinarswebinarkeysessionssessionkeypolls-get-openapi.md
-- name: Go To Webinar Get session questions
-  x-api-slug: go-to-webinar
+- name: Go To Webinar - Get session questions
+  x-api-slug: organizersorganizerkeywebinarswebinarkeysessionssessionkeyquestions-get
   description: Retrieve questions and answers for a past webinar session. For technical
     reasons, this call cannot be executed from this documentation. Please use the
     curl command to execute it.
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/731-gotomeeting.jpg
   humanURL: https://citrixonline.com
-  baseURL: https://api.citrixonline.com//G2W/rest//organizers/{organizerKey}/webinars/{webinarKey}/sessions/{sessionKey}/questions
-  tags: Organizers,OrganizerKey,Webinars,WebinarKey,Sessions,SessionKey,Questions
+  baseURL: https://api.citrixonline.com//G2W/rest
+  tags: Office, Meetings, Collaboration, Video Conferencing, Video Conferencing, SaaS,
+    Technology, Enterprise, API Provider, Meetings, Profiles, Conferences, Relative
+    Data, Service API, Networks
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/gotomeeting/organizersorganizerkeywebinarswebinarkeysessionssessionkeyquestions-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/gotomeeting/organizersorganizerkeywebinarswebinarkeysessionssessionkeyquestions-get-openapi.md
-- name: Go To Webinar Get session surveys
-  x-api-slug: go-to-webinar
+- name: Go To Webinar - Get session surveys
+  x-api-slug: organizersorganizerkeywebinarswebinarkeysessionssessionkeysurveys-get
   description: Retrieve surveys for a past webinar session. For technical reasons,
     this call cannot be executed from this documentation. Please use the curl command
     to execute it.
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/731-gotomeeting.jpg
   humanURL: https://citrixonline.com
-  baseURL: https://api.citrixonline.com//G2W/rest//organizers/{organizerKey}/webinars/{webinarKey}/sessions/{sessionKey}/surveys
-  tags: Organizers,OrganizerKey,Webinars,WebinarKey,Sessions,SessionKey,Surveys
+  baseURL: https://api.citrixonline.com//G2W/rest
+  tags: Office, Meetings, Collaboration, Video Conferencing, Video Conferencing, SaaS,
+    Technology, Enterprise, API Provider, Meetings, Profiles, Conferences, Relative
+    Data, Service API, Networks
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/gotomeeting/organizersorganizerkeywebinarswebinarkeysessionssessionkeysurveys-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/gotomeeting/organizersorganizerkeywebinarswebinarkeysessionssessionkeysurveys-get-openapi.md
-- name: Go To Webinar
-  x-api-slug: go-to-webinar
-  description: Citrix enables business mobility through the secure delivery of apps
-    and data to any device on any network.
+- name: Go To Webinar - Get webinar session
+  x-api-slug: organizersorganizerkeywebinarswebinarkeysessionssessionkey-get
+  description: Retrieves attendance details for a specific webinar session that has
+    ended. If attendees attended the session ('registrantsAttended'), specific attendance
+    details, such as attendenceTime for a registrant, will also be retrieved. For
+    technical reasons, this call cannot be executed from this documentation. Please
+    use the curl command to execute it.
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/731-gotomeeting.jpg
   humanURL: https://citrixonline.com
   baseURL: https://api.citrixonline.com//G2W/rest
-  tags: Sessions
+  tags: Office, Meetings, Collaboration, Video Conferencing, Video Conferencing, SaaS,
+    Technology, Enterprise, API Provider, Meetings, Profiles, Conferences, Relative
+    Data, Service API, Networks
   properties:
+  - type: x-postman-collection
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/gotomeeting/organizersorganizerkeywebinarswebinarkeysessionssessionkey-get-postman.md
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/gotomeeting/openapi.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/gotomeeting/organizersorganizerkeywebinarswebinarkeysessionssessionkey-get-openapi.md
+- name: Go To Webinar - Get session attendees
+  x-api-slug: organizersorganizerkeywebinarswebinarkeysessionssessionkeyattendees-get
+  description: Retrieve details for all attendees of a specific webinar session. For
+    technical reasons, this call cannot be executed from this documentation. Please
+    use the curl command to execute it.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/731-gotomeeting.jpg
+  humanURL: https://citrixonline.com
+  baseURL: https://api.citrixonline.com//G2W/rest
+  tags: Office, Meetings, Collaboration, Video Conferencing, Video Conferencing, SaaS,
+    Technology, Enterprise, API Provider, Meetings, Profiles, Conferences, Relative
+    Data, Service API, Networks
+  properties:
+  - type: x-postman-collection
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/gotomeeting/organizersorganizerkeywebinarswebinarkeysessionssessionkeyattendees-get-postman.md
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/gotomeeting/organizersorganizerkeywebinarswebinarkeysessionssessionkeyattendees-get-openapi.md
+- name: Go To Webinar - Get attendee
+  x-api-slug: organizersorganizerkeywebinarswebinarkeysessionssessionkeyattendeesregistrantkey-get
+  description: Retrieve registration details for a particular attendee of a specific
+    webinar session. For technical reasons, this call cannot be executed from this
+    documentation. Please use the curl command to execute it.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/731-gotomeeting.jpg
+  humanURL: https://citrixonline.com
+  baseURL: https://api.citrixonline.com//G2W/rest
+  tags: Office, Meetings, Collaboration, Video Conferencing, Video Conferencing, SaaS,
+    Technology, Enterprise, API Provider, Meetings, Profiles, Conferences, Relative
+    Data, Service API, Networks
+  properties:
+  - type: x-postman-collection
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/gotomeeting/organizersorganizerkeywebinarswebinarkeysessionssessionkeyattendeesregistrantkey-get-postman.md
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/gotomeeting/organizersorganizerkeywebinarswebinarkeysessionssessionkeyattendeesregistrantkey-get-openapi.md
+- name: Go To Webinar - Get attendee poll answers
+  x-api-slug: organizersorganizerkeywebinarswebinarkeysessionssessionkeyattendeesregistrantkeypolls-get
+  description: Get poll answers from a particular attendee of a specific webinar session.
+    For technical reasons, this call cannot be executed from this documentation. Please
+    use the curl command to execute it.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/731-gotomeeting.jpg
+  humanURL: https://citrixonline.com
+  baseURL: https://api.citrixonline.com//G2W/rest
+  tags: Office, Meetings, Collaboration, Video Conferencing, Video Conferencing, SaaS,
+    Technology, Enterprise, API Provider, Meetings, Profiles, Conferences, Relative
+    Data, Service API, Networks
+  properties:
+  - type: x-postman-collection
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/gotomeeting/organizersorganizerkeywebinarswebinarkeysessionssessionkeyattendeesregistrantkeypolls-get-postman.md
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/gotomeeting/organizersorganizerkeywebinarswebinarkeysessionssessionkeyattendeesregistrantkeypolls-get-openapi.md
+- name: Go To Webinar - Get attendee questions
+  x-api-slug: organizersorganizerkeywebinarswebinarkeysessionssessionkeyattendeesregistrantkeyquestions-get
+  description: Get questions asked by an attendee during a webinar session. For technical
+    reasons, this call cannot be executed from this documentation. Please use the
+    curl command to execute it.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/731-gotomeeting.jpg
+  humanURL: https://citrixonline.com
+  baseURL: https://api.citrixonline.com//G2W/rest
+  tags: Office, Meetings, Collaboration, Video Conferencing, Video Conferencing, SaaS,
+    Technology, Enterprise, API Provider, Meetings, Profiles, Conferences, Relative
+    Data, Service API, Networks
+  properties:
+  - type: x-postman-collection
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/gotomeeting/organizersorganizerkeywebinarswebinarkeysessionssessionkeyattendeesregistrantkeyquestions-get-postman.md
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/gotomeeting/organizersorganizerkeywebinarswebinarkeysessionssessionkeyattendeesregistrantkeyquestions-get-openapi.md
+- name: Go To Webinar - Get attendee survey answers
+  x-api-slug: organizersorganizerkeywebinarswebinarkeysessionssessionkeyattendeesregistrantkeysurveys-get
+  description: Retrieve survey answers from a particular attendee during a webinar
+    session. For technical reasons, this call cannot be executed from this documentation.
+    Please use the curl command to execute it.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/731-gotomeeting.jpg
+  humanURL: https://citrixonline.com
+  baseURL: https://api.citrixonline.com//G2W/rest
+  tags: Office, Meetings, Collaboration, Video Conferencing, Video Conferencing, SaaS,
+    Technology, Enterprise, API Provider, Meetings, Profiles, Conferences, Relative
+    Data, Service API, Networks
+  properties:
+  - type: x-postman-collection
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/gotomeeting/organizersorganizerkeywebinarswebinarkeysessionssessionkeyattendeesregistrantkeysurveys-get-postman.md
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/gotomeeting/organizersorganizerkeywebinarswebinarkeysessionssessionkeyattendeesregistrantkeysurveys-get-openapi.md
+- name: Go To Webinar - Get session performance
+  x-api-slug: organizersorganizerkeywebinarswebinarkeysessionssessionkeyperformance-get
+  description: Get performance details for a session. For technical reasons, this
+    call cannot be executed from this documentation. Please use the curl command to
+    execute it.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/731-gotomeeting.jpg
+  humanURL: https://citrixonline.com
+  baseURL: https://api.citrixonline.com//G2W/rest
+  tags: Office, Meetings, Collaboration, Video Conferencing, Video Conferencing, SaaS,
+    Technology, Enterprise, API Provider, Meetings, Profiles, Conferences, Relative
+    Data, Service API, Networks
+  properties:
+  - type: x-postman-collection
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/gotomeeting/organizersorganizerkeywebinarswebinarkeysessionssessionkeyperformance-get-postman.md
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/gotomeeting/organizersorganizerkeywebinarswebinarkeysessionssessionkeyperformance-get-openapi.md
+- name: Go To Webinar - Get session polls
+  x-api-slug: organizersorganizerkeywebinarswebinarkeysessionssessionkeypolls-get
+  description: Retrieve all collated attendee questions and answers for polls from
+    a specific webinar session. For technical reasons, this call cannot be executed
+    from this documentation. Please use the curl command to execute it.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/731-gotomeeting.jpg
+  humanURL: https://citrixonline.com
+  baseURL: https://api.citrixonline.com//G2W/rest
+  tags: Office, Meetings, Collaboration, Video Conferencing, Video Conferencing, SaaS,
+    Technology, Enterprise, API Provider, Meetings, Profiles, Conferences, Relative
+    Data, Service API, Networks
+  properties:
+  - type: x-postman-collection
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/gotomeeting/organizersorganizerkeywebinarswebinarkeysessionssessionkeypolls-get-postman.md
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/gotomeeting/organizersorganizerkeywebinarswebinarkeysessionssessionkeypolls-get-openapi.md
+- name: Go To Webinar - Get session questions
+  x-api-slug: organizersorganizerkeywebinarswebinarkeysessionssessionkeyquestions-get
+  description: Retrieve questions and answers for a past webinar session. For technical
+    reasons, this call cannot be executed from this documentation. Please use the
+    curl command to execute it.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/731-gotomeeting.jpg
+  humanURL: https://citrixonline.com
+  baseURL: https://api.citrixonline.com//G2W/rest
+  tags: Office, Meetings, Collaboration, Video Conferencing, Video Conferencing, SaaS,
+    Technology, Enterprise, API Provider, Meetings, Profiles, Conferences, Relative
+    Data, Service API, Networks
+  properties:
+  - type: x-postman-collection
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/gotomeeting/organizersorganizerkeywebinarswebinarkeysessionssessionkeyquestions-get-postman.md
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/gotomeeting/organizersorganizerkeywebinarswebinarkeysessionssessionkeyquestions-get-openapi.md
+- name: Go To Webinar - Get session surveys
+  x-api-slug: organizersorganizerkeywebinarswebinarkeysessionssessionkeysurveys-get
+  description: Retrieve surveys for a past webinar session. For technical reasons,
+    this call cannot be executed from this documentation. Please use the curl command
+    to execute it.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/731-gotomeeting.jpg
+  humanURL: https://citrixonline.com
+  baseURL: https://api.citrixonline.com//G2W/rest
+  tags: Office, Meetings, Collaboration, Video Conferencing, Video Conferencing, SaaS,
+    Technology, Enterprise, API Provider, Meetings, Profiles, Conferences, Relative
+    Data, Service API, Networks
+  properties:
+  - type: x-postman-collection
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/gotomeeting/organizersorganizerkeywebinarswebinarkeysessionssessionkeysurveys-get-postman.md
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/gotomeeting/organizersorganizerkeywebinarswebinarkeysessionssessionkeysurveys-get-openapi.md
+- name: Go To Webinar - Get webinar session
+  x-api-slug: organizersorganizerkeywebinarswebinarkeysessionssessionkey-get
+  description: Retrieves attendance details for a specific webinar session that has
+    ended. If attendees attended the session ('registrantsAttended'), specific attendance
+    details, such as attendenceTime for a registrant, will also be retrieved. For
+    technical reasons, this call cannot be executed from this documentation. Please
+    use the curl command to execute it.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/731-gotomeeting.jpg
+  humanURL: https://citrixonline.com
+  baseURL: https://api.citrixonline.com//G2W/rest
+  tags: Office, Meetings, Collaboration, Video Conferencing, Video Conferencing, SaaS,
+    Technology, Enterprise, API Provider, Meetings, Profiles, Conferences, Relative
+    Data, Service API, Networks
+  properties:
+  - type: x-postman-collection
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/gotomeeting/organizersorganizerkeywebinarswebinarkeysessionssessionkey-get-postman.md
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/gotomeeting/organizersorganizerkeywebinarswebinarkeysessionssessionkey-get-openapi.md
+- name: Go To Webinar - Get session attendees
+  x-api-slug: organizersorganizerkeywebinarswebinarkeysessionssessionkeyattendees-get
+  description: Retrieve details for all attendees of a specific webinar session. For
+    technical reasons, this call cannot be executed from this documentation. Please
+    use the curl command to execute it.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/731-gotomeeting.jpg
+  humanURL: https://citrixonline.com
+  baseURL: https://api.citrixonline.com//G2W/rest
+  tags: Office, Meetings, Collaboration, Video Conferencing, Video Conferencing, SaaS,
+    Technology, Enterprise, API Provider, Meetings, Profiles, Conferences, Relative
+    Data, Service API, Networks
+  properties:
+  - type: x-postman-collection
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/gotomeeting/organizersorganizerkeywebinarswebinarkeysessionssessionkeyattendees-get-postman.md
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/gotomeeting/organizersorganizerkeywebinarswebinarkeysessionssessionkeyattendees-get-openapi.md
+- name: Go To Webinar - Get attendee
+  x-api-slug: organizersorganizerkeywebinarswebinarkeysessionssessionkeyattendeesregistrantkey-get
+  description: Retrieve registration details for a particular attendee of a specific
+    webinar session. For technical reasons, this call cannot be executed from this
+    documentation. Please use the curl command to execute it.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/731-gotomeeting.jpg
+  humanURL: https://citrixonline.com
+  baseURL: https://api.citrixonline.com//G2W/rest
+  tags: Office, Meetings, Collaboration, Video Conferencing, Video Conferencing, SaaS,
+    Technology, Enterprise, API Provider, Meetings, Profiles, Conferences, Relative
+    Data, Service API, Networks
+  properties:
+  - type: x-postman-collection
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/gotomeeting/organizersorganizerkeywebinarswebinarkeysessionssessionkeyattendeesregistrantkey-get-postman.md
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/gotomeeting/organizersorganizerkeywebinarswebinarkeysessionssessionkeyattendeesregistrantkey-get-openapi.md
+- name: Go To Webinar - Get attendee poll answers
+  x-api-slug: organizersorganizerkeywebinarswebinarkeysessionssessionkeyattendeesregistrantkeypolls-get
+  description: Get poll answers from a particular attendee of a specific webinar session.
+    For technical reasons, this call cannot be executed from this documentation. Please
+    use the curl command to execute it.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/731-gotomeeting.jpg
+  humanURL: https://citrixonline.com
+  baseURL: https://api.citrixonline.com//G2W/rest
+  tags: Office, Meetings, Collaboration, Video Conferencing, Video Conferencing, SaaS,
+    Technology, Enterprise, API Provider, Meetings, Profiles, Conferences, Relative
+    Data, Service API, Networks
+  properties:
+  - type: x-postman-collection
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/gotomeeting/organizersorganizerkeywebinarswebinarkeysessionssessionkeyattendeesregistrantkeypolls-get-postman.md
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/gotomeeting/organizersorganizerkeywebinarswebinarkeysessionssessionkeyattendeesregistrantkeypolls-get-openapi.md
+- name: Go To Webinar - Get attendee questions
+  x-api-slug: organizersorganizerkeywebinarswebinarkeysessionssessionkeyattendeesregistrantkeyquestions-get
+  description: Get questions asked by an attendee during a webinar session. For technical
+    reasons, this call cannot be executed from this documentation. Please use the
+    curl command to execute it.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/731-gotomeeting.jpg
+  humanURL: https://citrixonline.com
+  baseURL: https://api.citrixonline.com//G2W/rest
+  tags: Office, Meetings, Collaboration, Video Conferencing, Video Conferencing, SaaS,
+    Technology, Enterprise, API Provider, Meetings, Profiles, Conferences, Relative
+    Data, Service API, Networks
+  properties:
+  - type: x-postman-collection
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/gotomeeting/organizersorganizerkeywebinarswebinarkeysessionssessionkeyattendeesregistrantkeyquestions-get-postman.md
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/gotomeeting/organizersorganizerkeywebinarswebinarkeysessionssessionkeyattendeesregistrantkeyquestions-get-openapi.md
+- name: Go To Webinar - Get attendee survey answers
+  x-api-slug: organizersorganizerkeywebinarswebinarkeysessionssessionkeyattendeesregistrantkeysurveys-get
+  description: Retrieve survey answers from a particular attendee during a webinar
+    session. For technical reasons, this call cannot be executed from this documentation.
+    Please use the curl command to execute it.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/731-gotomeeting.jpg
+  humanURL: https://citrixonline.com
+  baseURL: https://api.citrixonline.com//G2W/rest
+  tags: Office, Meetings, Collaboration, Video Conferencing, Video Conferencing, SaaS,
+    Technology, Enterprise, API Provider, Meetings, Profiles, Conferences, Relative
+    Data, Service API, Networks
+  properties:
+  - type: x-postman-collection
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/gotomeeting/organizersorganizerkeywebinarswebinarkeysessionssessionkeyattendeesregistrantkeysurveys-get-postman.md
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/gotomeeting/organizersorganizerkeywebinarswebinarkeysessionssessionkeyattendeesregistrantkeysurveys-get-openapi.md
+- name: Go To Webinar - Get session performance
+  x-api-slug: organizersorganizerkeywebinarswebinarkeysessionssessionkeyperformance-get
+  description: Get performance details for a session. For technical reasons, this
+    call cannot be executed from this documentation. Please use the curl command to
+    execute it.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/731-gotomeeting.jpg
+  humanURL: https://citrixonline.com
+  baseURL: https://api.citrixonline.com//G2W/rest
+  tags: Office, Meetings, Collaboration, Video Conferencing, Video Conferencing, SaaS,
+    Technology, Enterprise, API Provider, Meetings, Profiles, Conferences, Relative
+    Data, Service API, Networks
+  properties:
+  - type: x-postman-collection
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/gotomeeting/organizersorganizerkeywebinarswebinarkeysessionssessionkeyperformance-get-postman.md
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/gotomeeting/organizersorganizerkeywebinarswebinarkeysessionssessionkeyperformance-get-openapi.md
+- name: Go To Webinar - Get session polls
+  x-api-slug: organizersorganizerkeywebinarswebinarkeysessionssessionkeypolls-get
+  description: Retrieve all collated attendee questions and answers for polls from
+    a specific webinar session. For technical reasons, this call cannot be executed
+    from this documentation. Please use the curl command to execute it.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/731-gotomeeting.jpg
+  humanURL: https://citrixonline.com
+  baseURL: https://api.citrixonline.com//G2W/rest
+  tags: Office, Meetings, Collaboration, Video Conferencing, Video Conferencing, SaaS,
+    Technology, Enterprise, API Provider, Meetings, Profiles, Conferences, Relative
+    Data, Service API, Networks
+  properties:
+  - type: x-postman-collection
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/gotomeeting/organizersorganizerkeywebinarswebinarkeysessionssessionkeypolls-get-postman.md
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/gotomeeting/organizersorganizerkeywebinarswebinarkeysessionssessionkeypolls-get-openapi.md
+- name: Go To Webinar - Get session questions
+  x-api-slug: organizersorganizerkeywebinarswebinarkeysessionssessionkeyquestions-get
+  description: Retrieve questions and answers for a past webinar session. For technical
+    reasons, this call cannot be executed from this documentation. Please use the
+    curl command to execute it.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/731-gotomeeting.jpg
+  humanURL: https://citrixonline.com
+  baseURL: https://api.citrixonline.com//G2W/rest
+  tags: Office, Meetings, Collaboration, Video Conferencing, Video Conferencing, SaaS,
+    Technology, Enterprise, API Provider, Meetings, Profiles, Conferences, Relative
+    Data, Service API, Networks
+  properties:
+  - type: x-postman-collection
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/gotomeeting/organizersorganizerkeywebinarswebinarkeysessionssessionkeyquestions-get-postman.md
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/gotomeeting/organizersorganizerkeywebinarswebinarkeysessionssessionkeyquestions-get-openapi.md
+- name: Go To Webinar - Get session surveys
+  x-api-slug: organizersorganizerkeywebinarswebinarkeysessionssessionkeysurveys-get
+  description: Retrieve surveys for a past webinar session. For technical reasons,
+    this call cannot be executed from this documentation. Please use the curl command
+    to execute it.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/731-gotomeeting.jpg
+  humanURL: https://citrixonline.com
+  baseURL: https://api.citrixonline.com//G2W/rest
+  tags: Office, Meetings, Collaboration, Video Conferencing, Video Conferencing, SaaS,
+    Technology, Enterprise, API Provider, Meetings, Profiles, Conferences, Relative
+    Data, Service API, Networks
+  properties:
+  - type: x-postman-collection
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/gotomeeting/organizersorganizerkeywebinarswebinarkeysessionssessionkeysurveys-get-postman.md
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/gotomeeting/organizersorganizerkeywebinarswebinarkeysessionssessionkeysurveys-get-openapi.md
+- name: Go To Webinar - Get session surveys
+  x-api-slug: organizersorganizerkeywebinarswebinarkeysessionssessionkeysurveys-get
+  description: Retrieve surveys for a past webinar session. For technical reasons,
+    this call cannot be executed from this documentation. Please use the curl command
+    to execute it.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/731-gotomeeting.jpg
+  humanURL: https://citrixonline.com
+  baseURL: https://api.citrixonline.com//G2W/rest
+  tags: Office, Meetings, Collaboration, Video Conferencing, Video Conferencing, SaaS,
+    Technology, Enterprise, API Provider, Meetings, Profiles, Conferences, Relative
+    Data, Service API, Networks
+  properties:
+  - type: x-postman-collection
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/gotomeeting/organizersorganizerkeywebinarswebinarkeysessionssessionkeysurveys-get-postman.md
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/gotomeeting/organizersorganizerkeywebinarswebinarkeysessionssessionkeysurveys-get-openapi.md
+- name: Go To Webinar - Get session questions
+  x-api-slug: organizersorganizerkeywebinarswebinarkeysessionssessionkeyquestions-get
+  description: Retrieve questions and answers for a past webinar session. For technical
+    reasons, this call cannot be executed from this documentation. Please use the
+    curl command to execute it.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/731-gotomeeting.jpg
+  humanURL: https://citrixonline.com
+  baseURL: https://api.citrixonline.com//G2W/rest
+  tags: Office, Meetings, Collaboration, Video Conferencing, Video Conferencing, SaaS,
+    Technology, Enterprise, API Provider, Meetings, Profiles, Conferences, Relative
+    Data, Service API, Networks
+  properties:
+  - type: x-postman-collection
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/gotomeeting/organizersorganizerkeywebinarswebinarkeysessionssessionkeyquestions-get-postman.md
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/gotomeeting/organizersorganizerkeywebinarswebinarkeysessionssessionkeyquestions-get-openapi.md
+- name: Go To Webinar - Get session polls
+  x-api-slug: organizersorganizerkeywebinarswebinarkeysessionssessionkeypolls-get
+  description: Retrieve all collated attendee questions and answers for polls from
+    a specific webinar session. For technical reasons, this call cannot be executed
+    from this documentation. Please use the curl command to execute it.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/731-gotomeeting.jpg
+  humanURL: https://citrixonline.com
+  baseURL: https://api.citrixonline.com//G2W/rest
+  tags: Office, Meetings, Collaboration, Video Conferencing, Video Conferencing, SaaS,
+    Technology, Enterprise, API Provider, Meetings, Profiles, Conferences, Relative
+    Data, Service API, Networks
+  properties:
+  - type: x-postman-collection
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/gotomeeting/organizersorganizerkeywebinarswebinarkeysessionssessionkeypolls-get-postman.md
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/gotomeeting/organizersorganizerkeywebinarswebinarkeysessionssessionkeypolls-get-openapi.md
+- name: Go To Webinar - Get session performance
+  x-api-slug: organizersorganizerkeywebinarswebinarkeysessionssessionkeyperformance-get
+  description: Get performance details for a session. For technical reasons, this
+    call cannot be executed from this documentation. Please use the curl command to
+    execute it.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/731-gotomeeting.jpg
+  humanURL: https://citrixonline.com
+  baseURL: https://api.citrixonline.com//G2W/rest
+  tags: Office, Meetings, Collaboration, Video Conferencing, Video Conferencing, SaaS,
+    Technology, Enterprise, API Provider, Meetings, Profiles, Conferences, Relative
+    Data, Service API, Networks
+  properties:
+  - type: x-postman-collection
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/gotomeeting/organizersorganizerkeywebinarswebinarkeysessionssessionkeyperformance-get-postman.md
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/gotomeeting/organizersorganizerkeywebinarswebinarkeysessionssessionkeyperformance-get-openapi.md
+- name: Go To Webinar - Get attendee survey answers
+  x-api-slug: organizersorganizerkeywebinarswebinarkeysessionssessionkeyattendeesregistrantkeysurveys-get
+  description: Retrieve survey answers from a particular attendee during a webinar
+    session. For technical reasons, this call cannot be executed from this documentation.
+    Please use the curl command to execute it.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/731-gotomeeting.jpg
+  humanURL: https://citrixonline.com
+  baseURL: https://api.citrixonline.com//G2W/rest
+  tags: Office, Meetings, Collaboration, Video Conferencing, Video Conferencing, SaaS,
+    Technology, Enterprise, API Provider, Meetings, Profiles, Conferences, Relative
+    Data, Service API, Networks
+  properties:
+  - type: x-postman-collection
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/gotomeeting/organizersorganizerkeywebinarswebinarkeysessionssessionkeyattendeesregistrantkeysurveys-get-postman.md
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/gotomeeting/organizersorganizerkeywebinarswebinarkeysessionssessionkeyattendeesregistrantkeysurveys-get-openapi.md
+- name: Go To Webinar - Get attendee questions
+  x-api-slug: organizersorganizerkeywebinarswebinarkeysessionssessionkeyattendeesregistrantkeyquestions-get
+  description: Get questions asked by an attendee during a webinar session. For technical
+    reasons, this call cannot be executed from this documentation. Please use the
+    curl command to execute it.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/731-gotomeeting.jpg
+  humanURL: https://citrixonline.com
+  baseURL: https://api.citrixonline.com//G2W/rest
+  tags: Office, Meetings, Collaboration, Video Conferencing, Video Conferencing, SaaS,
+    Technology, Enterprise, API Provider, Meetings, Profiles, Conferences, Relative
+    Data, Service API, Networks
+  properties:
+  - type: x-postman-collection
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/gotomeeting/organizersorganizerkeywebinarswebinarkeysessionssessionkeyattendeesregistrantkeyquestions-get-postman.md
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/gotomeeting/organizersorganizerkeywebinarswebinarkeysessionssessionkeyattendeesregistrantkeyquestions-get-openapi.md
+- name: Go To Webinar - Get attendee poll answers
+  x-api-slug: organizersorganizerkeywebinarswebinarkeysessionssessionkeyattendeesregistrantkeypolls-get
+  description: Get poll answers from a particular attendee of a specific webinar session.
+    For technical reasons, this call cannot be executed from this documentation. Please
+    use the curl command to execute it.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/731-gotomeeting.jpg
+  humanURL: https://citrixonline.com
+  baseURL: https://api.citrixonline.com//G2W/rest
+  tags: Office, Meetings, Collaboration, Video Conferencing, Video Conferencing, SaaS,
+    Technology, Enterprise, API Provider, Meetings, Profiles, Conferences, Relative
+    Data, Service API, Networks
+  properties:
+  - type: x-postman-collection
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/gotomeeting/organizersorganizerkeywebinarswebinarkeysessionssessionkeyattendeesregistrantkeypolls-get-postman.md
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/gotomeeting/organizersorganizerkeywebinarswebinarkeysessionssessionkeyattendeesregistrantkeypolls-get-openapi.md
+- name: Go To Webinar - Get attendee
+  x-api-slug: organizersorganizerkeywebinarswebinarkeysessionssessionkeyattendeesregistrantkey-get
+  description: Retrieve registration details for a particular attendee of a specific
+    webinar session. For technical reasons, this call cannot be executed from this
+    documentation. Please use the curl command to execute it.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/731-gotomeeting.jpg
+  humanURL: https://citrixonline.com
+  baseURL: https://api.citrixonline.com//G2W/rest
+  tags: Office, Meetings, Collaboration, Video Conferencing, Video Conferencing, SaaS,
+    Technology, Enterprise, API Provider, Meetings, Profiles, Conferences, Relative
+    Data, Service API, Networks
+  properties:
+  - type: x-postman-collection
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/gotomeeting/organizersorganizerkeywebinarswebinarkeysessionssessionkeyattendeesregistrantkey-get-postman.md
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/gotomeeting/organizersorganizerkeywebinarswebinarkeysessionssessionkeyattendeesregistrantkey-get-openapi.md
+- name: Go To Webinar - Get session attendees
+  x-api-slug: organizersorganizerkeywebinarswebinarkeysessionssessionkeyattendees-get
+  description: Retrieve details for all attendees of a specific webinar session. For
+    technical reasons, this call cannot be executed from this documentation. Please
+    use the curl command to execute it.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/731-gotomeeting.jpg
+  humanURL: https://citrixonline.com
+  baseURL: https://api.citrixonline.com//G2W/rest
+  tags: Office, Meetings, Collaboration, Video Conferencing, Video Conferencing, SaaS,
+    Technology, Enterprise, API Provider, Meetings, Profiles, Conferences, Relative
+    Data, Service API, Networks
+  properties:
+  - type: x-postman-collection
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/gotomeeting/organizersorganizerkeywebinarswebinarkeysessionssessionkeyattendees-get-postman.md
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/gotomeeting/organizersorganizerkeywebinarswebinarkeysessionssessionkeyattendees-get-openapi.md
+- name: Go To Webinar - Get webinar session
+  x-api-slug: organizersorganizerkeywebinarswebinarkeysessionssessionkey-get
+  description: Retrieves attendance details for a specific webinar session that has
+    ended. If attendees attended the session ('registrantsAttended'), specific attendance
+    details, such as attendenceTime for a registrant, will also be retrieved. For
+    technical reasons, this call cannot be executed from this documentation. Please
+    use the curl command to execute it.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/731-gotomeeting.jpg
+  humanURL: https://citrixonline.com
+  baseURL: https://api.citrixonline.com//G2W/rest
+  tags: Office, Meetings, Collaboration, Video Conferencing, Video Conferencing, SaaS,
+    Technology, Enterprise, API Provider, Meetings, Profiles, Conferences, Relative
+    Data, Service API, Networks
+  properties:
+  - type: x-postman-collection
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/gotomeeting/organizersorganizerkeywebinarswebinarkeysessionssessionkey-get-postman.md
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/gotomeeting/organizersorganizerkeywebinarswebinarkeysessionssessionkey-get-openapi.md
 x-common:
+- type: x-api-gallery
+  url: http://google.url.shortener.api.gallery.streamdata.io
+- type: x-api-stack
+  url: http://gotomeeting.stack.network
 - type: x-base
   url: https://api.citrixonline.com
 - type: x-blog

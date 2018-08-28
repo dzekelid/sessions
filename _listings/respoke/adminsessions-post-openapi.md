@@ -3,9 +3,8 @@ swagger: "2.0"
 x-collection-name: Respoke
 x-complete: 0
 info:
-  title: Respoke REST API Permissions
-  description: Full API permissions are obtained by POSTing your username and password
-    to [base]/adminsessions.
+  title: Respoke Admin Sessions
+  description: Log in with the account username and password. Get an Admin-Token.
   termsOfService: https://www.respoke.io/files/respoke-tos-20141007.pdf
   version: v1
 host: api.respoke.io
@@ -36,25 +35,6 @@ paths:
       tags:
       - Admin
       - Sessions
-  adminsessions/:
-    post:
-      summary: Permissions
-      description: Full API permissions are obtained by POSTing your username and
-        password to [base]/adminsessions.
-      operationId: postAdminsessions
-      x-api-path-slug: adminsessions-post
-      parameters:
-      - in: query
-        name: password
-        description: Your username
-      - in: query
-        name: username
-        description: username
-      responses:
-        200:
-          description: OK
-      tags:
-      - Adminsessions
 x-streamrank:
   polling_total_time_average: 0
   polling_size_download_average: 0

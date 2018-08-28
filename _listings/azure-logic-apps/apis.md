@@ -11,73 +11,53 @@ image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/l
 x-kinRank: "10"
 x-alexaRank: "0"
 tags: Sessions
-created: "2018-06-25"
-modified: "2018-06-25"
+created: "2018-08-28"
+modified: "2018-08-28"
 url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/azure-logic-apps/apis.md
 specificationVersion: "0.14"
 apis:
-- name: Azure Logic Apps API Sessions List By Integration Accounts
-  x-api-slug: azure-logic-apps-api
-  description: Gets a list of integration account sessions.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/azure-logic-apps-01-connectors.png
-  humanURL: https://azure.microsoft.com/en-us/services/logic-apps/
-  baseURL: ://management.azure.com////subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Logic/integrationAccounts/{integrationAccountName}/sessions
-  tags: Sessions Integration Accounts
-  properties:
-  - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/azure-logic-apps/subscriptionssubscriptionidresourcegroupsresourcegroupnameprovidersmicrosoft-logicintegrationaccountsintegrationaccountnamesessions-get-postman.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/azure-logic-apps/subscriptionssubscriptionidresourcegroupsresourcegroupnameprovidersmicrosoft-logicintegrationaccountsintegrationaccountnamesessions-get-openapi.md
-- name: Azure Logic Apps API Sessions Get
-  x-api-slug: azure-logic-apps-api
+- name: LogicManagementClient - Sessions Get
+  x-api-slug: subscriptionssubscriptionidresourcegroupsresourcegroupnameprovidersmicrosoft-logicintegrationaccountsintegrationaccountnamesessionssessionname-get
   description: Gets an integration account session.
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/azure-logic-apps-01-connectors.png
   humanURL: https://azure.microsoft.com/en-us/services/logic-apps/
-  baseURL: ://management.azure.com////subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Logic/integrationAccounts/{integrationAccountName}/sessions/{sessionName}
-  tags: Sessions
+  baseURL: ://management.azure.com//
+  tags: Microsoft, iPaaS, Stack Network, API Service Provider, API Provider, Profiles,
+    Relative Data, Service API
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/azure-logic-apps/subscriptionssubscriptionidresourcegroupsresourcegroupnameprovidersmicrosoft-logicintegrationaccountsintegrationaccountnamesessionssessionname-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/azure-logic-apps/subscriptionssubscriptionidresourcegroupsresourcegroupnameprovidersmicrosoft-logicintegrationaccountsintegrationaccountnamesessionssessionname-get-openapi.md
-- name: Azure Logic Apps API Sessions Create Or Update
-  x-api-slug: azure-logic-apps-api
+- name: LogicManagementClient - Sessions Create Or Update
+  x-api-slug: subscriptionssubscriptionidresourcegroupsresourcegroupnameprovidersmicrosoft-logicintegrationaccountsintegrationaccountnamesessionssessionname-put
   description: Creates or updates an integration account session.
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/azure-logic-apps-01-connectors.png
   humanURL: https://azure.microsoft.com/en-us/services/logic-apps/
-  baseURL: ://management.azure.com////subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Logic/integrationAccounts/{integrationAccountName}/sessions/{sessionName}
-  tags: Sessions
+  baseURL: ://management.azure.com//
+  tags: Microsoft, iPaaS, Stack Network, API Service Provider, API Provider, Profiles,
+    Relative Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/azure-logic-apps/subscriptionssubscriptionidresourcegroupsresourcegroupnameprovidersmicrosoft-logicintegrationaccountsintegrationaccountnamesessionssessionname-put-openapi.md
-- name: Azure Logic Apps API Sessions Delete
-  x-api-slug: azure-logic-apps-api
+- name: LogicManagementClient - Sessions Delete
+  x-api-slug: subscriptionssubscriptionidresourcegroupsresourcegroupnameprovidersmicrosoft-logicintegrationaccountsintegrationaccountnamesessionssessionname-delete
   description: Deletes an integration account session.
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/azure-logic-apps-01-connectors.png
   humanURL: https://azure.microsoft.com/en-us/services/logic-apps/
-  baseURL: ://management.azure.com////subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Logic/integrationAccounts/{integrationAccountName}/sessions/{sessionName}
-  tags: Sessions
+  baseURL: ://management.azure.com//
+  tags: Microsoft, iPaaS, Stack Network, API Service Provider, API Provider, Profiles,
+    Relative Data, Service API
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/azure-logic-apps/subscriptionssubscriptionidresourcegroupsresourcegroupnameprovidersmicrosoft-logicintegrationaccountsintegrationaccountnamesessionssessionname-delete-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/azure-logic-apps/subscriptionssubscriptionidresourcegroupsresourcegroupnameprovidersmicrosoft-logicintegrationaccountsintegrationaccountnamesessionssessionname-delete-openapi.md
-- name: Azure Logic Apps API
-  x-api-slug: azure-logic-apps-api
-  description: You can connect apps, data, and devices anywhere&mdash;on-premises
-    or in the cloud&mdash;with our large ecosystem of software as a service (SaaS)
-    and cloud-based connectors that includes Salesforce, Office 365, Twitter, Dropbox,
-    Google services, and more. Its never been easier to access data and keep your
-    disparate systems up-to-date, in real-time. New connectors are being added to
-    the Azure Marketplace all of the time.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/azure-logic-apps-01-connectors.png
-  humanURL: https://azure.microsoft.com/en-us/services/logic-apps/
-  baseURL: ://management.azure.com//
-  tags: Sessions
-  properties:
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/sessions/master/_listings/azure-logic-apps/openapi.md
 x-common:
+- type: x-api-gallery
+  url: http://azure.key.vault.api.gallery.streamdata.io
+- type: x-api-stack
+  url: http://azure.logic.apps.stack.network
 - type: x-documentation
   url: https://docs.microsoft.com/en-us/azure/logic-apps/
 - type: x-pricing

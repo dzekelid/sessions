@@ -1,12 +1,9 @@
----
 swagger: "2.0"
 x-collection-name: Mattermost
 x-complete: 1
 info:
-  title: Mattermost API Reference
-  description: -api-v4-is-stable-with-the-mattermost-server-4-0-release--api-v3-was-deprecated-on-january-16th-2018-and-scheduled-for-removal-in-mattermost-v5-0--details-heretagapiv3deprecation--looking-for-the-api-v3-reference-it-has-moved-herehttpsapi-mattermost-comv3-
-  termsOfService: https://about.mattermost.com/default-terms/
-  version: 4.0.0
+  title: Mattermost
+  version: 1.0.0
 host: your-mattermost-url.com
 basePath: /api/v4
 schemes:
@@ -35,6 +32,30 @@ paths:
       tags:
       - Users
       - Sessions
+  /users/{user_id}/sessions/revoke:
+    post:
+      summary: Revoke a user session
+      description: |-
+        Revokes a user session from the provided user id and session id strings.
+        ##### Permissions
+        Must be logged in as the user being updated or have the `edit_other_users` permission.
+      operationId: revokes-a-user-session-from-the-provided-user-id-and-session-id-strings-permissionsmust-be-logged-in
+      x-api-path-slug: usersuser-idsessionsrevoke-post
+      parameters:
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/holder'
+      - in: path
+        name: user_id
+        description: User GUID
+      responses:
+        200:
+          description: OK
+      tags:
+      - Revoke
+      - User
+      - Session
   /users/{user_id}/sessions/revoke/all:
     post:
       summary: Revoke all active sessions for a user
@@ -58,4 +79,3 @@ paths:
       - Active
       - Sessionsa
       - User
----

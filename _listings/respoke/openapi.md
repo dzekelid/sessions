@@ -1,4 +1,3 @@
----
 swagger: "2.0"
 x-collection-name: Respoke
 x-complete: 1
@@ -35,39 +34,22 @@ paths:
       tags:
       - Admin
       - Sessions
-  adminsessions/:
+  session-tokens/:
     post:
-      summary: Permissions
-      description: Full API permissions are obtained by POSTing your username and
-        password to [base]/adminsessions.
-      operationId: postAdminsessions
-      x-api-path-slug: adminsessions-post
+      summary: Session Tokens
+      description: An end-user client posts a tokenId from POST [base]/tokens to authenticate
+        to an app as endpointId.
+      operationId: postSessionTokens
+      x-api-path-slug: sessiontokens-post
       parameters:
-      - in: query
-        name: password
-        description: Your username
-      - in: query
-        name: username
-        description: username
-      responses:
-        200:
-          description: OK
-      tags:
-      - Adminsessions
-  appauthsessions/:
-    post:
-      summary: App Auth Sessions
-      description: Your users authenticate to Respoke using an App-Token obtained
-        when they POST your tokenId to [base]/appauthsessions.
-      operationId: postAppauthsessions
-      x-api-path-slug: appauthsessions-post
-      parameters:
-      - in: query
+      - schema:
+          $ref: '#/definitions/holder'
+      - in: header
         name: App-Token
         description: Your application token
       responses:
         200:
           description: OK
       tags:
-      - Appauthsessions
----
+      - Session
+      - Tokens

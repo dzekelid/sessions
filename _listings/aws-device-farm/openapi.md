@@ -1,4 +1,3 @@
----
 swagger: "2.0"
 x-collection-name: AWS Device Farm
 x-complete: 1
@@ -12,6 +11,28 @@ produces:
 consumes:
 - application/json
 paths:
+  /?Action=ListRemoteAccessSessions:
+    get:
+      summary: List Remote Access Sessions
+      description: Returns a list of all currently running remote access sessions.
+      operationId: listRemoteAccessSessions
+      x-api-path-slug: actionlistremoteaccesssessions-get
+      parameters:
+      - in: query
+        name: arn
+        description: The Amazon Resource Name (ARN) of the remote access session about
+          which you are requesting information
+        type: string
+      - in: query
+        name: nextToken
+        description: An identifier that was returned from the previous call to this
+          operation, which can be used to return the next set of items in the list
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Remote Access Sessions
   /?Action=CreateRemoteAccessSession:
     get:
       summary: Create Remote Access Session
@@ -98,28 +119,6 @@ paths:
           description: OK
       tags:
       - Remote Access Sessions
-  /?Action=ListRemoteAccessSessions:
-    get:
-      summary: List Remote Access Sessions
-      description: Returns a list of all currently running remote access sessions.
-      operationId: listRemoteAccessSessions
-      x-api-path-slug: actionlistremoteaccesssessions-get
-      parameters:
-      - in: query
-        name: arn
-        description: The Amazon Resource Name (ARN) of the remote access session about
-          which you are requesting information
-        type: string
-      - in: query
-        name: nextToken
-        description: An identifier that was returned from the previous call to this
-          operation, which can be used to return the next set of items in the list
-        type: string
-      responses:
-        200:
-          description: OK
-      tags:
-      - Remote Access Sessions
   /?Action=StopRemoteAccessSession:
     get:
       summary: Stop Remote Access Session
@@ -137,4 +136,3 @@ paths:
           description: OK
       tags:
       - Remote Access Sessions
----
